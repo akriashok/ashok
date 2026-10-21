@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Ashok — AI engineer building agents with Claude, MCP and LangGraph.">
+<meta name="theme-color" content="#16687f">
+<title>Ashok — Portfolio</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --sunk:#e3e9ec; --fg:#14212b; --muted:#5a6b77; --line:#d3dce1;
+  --accent:#16687f; --accent-ink:#ffffff; --mark:#f2c14e; --mark-ink:#3a2a00;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f171d; --surface:#17222a; --sunk:#1e2b34; --fg:#e6eef2; --muted:#93a6b2; --line:#2a3a45;
+  --accent:#4fb3cf; --accent-ink:#06222b; --mark:#e9b949; --mark-ink:#2b1f00; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f171d; --surface:#17222a; --sunk:#1e2b34; --fg:#e6eef2; --muted:#93a6b2; --line:#2a3a45;
+  --accent:#4fb3cf; --accent-ink:#06222b; --mark:#e9b949; --mark-ink:#2b1f00; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);padding-inline:16px}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto}
+.label{font:500 .72rem/1 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);margin-inline:-16px;padding-inline:16px}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
+.brand{font:800 1.15rem/1 var(--display);text-decoration:none;color:var(--fg)}
+.brand span{color:var(--accent)}
+.links{display:flex;gap:4px;align-items:center}
+.links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.92rem;padding:6px 10px;border-radius:8px}
+.links a:hover{color:var(--fg);background:var(--sunk)}
+#themeBtn{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;width:34px;height:34px;cursor:pointer;display:grid;place-items:center}
+#themeBtn svg{width:16px;height:16px}
+@media (max-width:560px){.links a.opt{display:none}}
+
+.hero{padding:72px 0 56px;display:grid;gap:20px}
+.hero h1{font:800 clamp(2.4rem,7vw,4.4rem)/1.02 var(--display);margin:0;letter-spacing:-.02em}
+.hero h1 mark{background:var(--mark);color:var(--mark-ink);padding:0 .12em;border-radius:6px}
+.hero p{font-size:1.15rem;color:var(--muted);max-width:60ch;margin:0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px}
+
+section{padding:48px 0;border-top:1px solid var(--line)}
+section h2{font:700 clamp(1.6rem,4vw,2.2rem)/1.1 var(--display);margin:8px 0 24px}
+
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.card.feature{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.card h3{font:700 1.25rem/1.2 var(--display);margin:0}
+.card p{margin:0;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.tag{font:500 .72rem/1 var(--mono);padding:6px 8px;border-radius:6px;background:var(--sunk);color:var(--fg)}
+.card .actions{display:flex;flex-wrap:wrap;gap:14px;font-weight:600;font-size:.92rem}
+.card .actions a{text-decoration:none}
+.card .actions a:hover{text-decoration:underline}
+
+.skills{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
+.skills h3{font:600 1rem/1.2 var(--body);margin:0 0 10px}
+.skills ul{margin:0;padding-left:18px;color:var(--muted)}
+
+.about{display:grid;gap:24px;grid-template-columns:1fr}
+@media (min-width:760px){.about{grid-template-columns:1.4fr 1fr}}
+.about p{margin:0 0 14px;max-width:62ch}
+.facts{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px;align-content:start}
+.facts div{display:grid;gap:4px}
+
+.contact{text-align:center;padding-bottom:72px}
+.contact p{color:var(--muted);max-width:52ch;margin:0 auto 20px}
+.contact .cta{justify-content:center}
+footer{border-top:1px solid var(--line);padding:20px 0 calc(20px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:.85rem;text-align:center}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">ashok<span>.</span></a>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a class="opt" href="#skills">Skills</a>
+      <a class="opt" href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+  <header class="hero">
+    <span class="label">AI engineer · Agents · LLM apps</span>
+    <h1>Hi, I'm Ashok.<br>I build <mark>AI agents</mark> that do real work.</h1>
+    <p>I design and ship LLM-powered tools: multi-agent systems with LangGraph, tool-using agents over the Model Context Protocol, and fast in-browser apps that help people in the moment.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">See my work</a>
+      <a class="btn" href="https://github.com/akriashok" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.3 18.3 4.6 18.3 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+        GitHub
+      </a>
+      <a class="btn" href="mailto:ashok54155@gmail.com">Email me</a>
+    </div>
+  </header>
+
+  <section id="projects">
+    <span class="label">Selected work</span>
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card feature">
+        <span class="label">Live app · PWA</span>
+        <h3>Interview Copilot</h3>
+        <p>A phone-first assistant for live interviews. It listens through the mic, transcribes the question in real time and drafts a strong answer grounded in your uploaded resume (PDF or Word). Installs to the home screen and runs entirely in the browser.</p>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Web Speech API</span><span class="tag">LLM</span><span class="tag">PDF.js</span><span class="tag">PWA</span></div>
+        <div class="actions">
+          <a href="https://akriashok.github.io/AI-Practise/interview-copilot/" target="_blank" rel="noopener">Open live app →</a>
+          <a href="https://github.com/akriashok/AI-Practise/tree/main/interview-copilot" target="_blank" rel="noopener">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="label">Multi-agent system</span>
+        <h3>Healthcare Multi-Agent (LangGraph)</h3>
+        <p>A supervisor routes questions to specialist agents (NL2SQL data explorer, KPI reporting, file tracker, Plotly visualization) over a 40-table synthetic healthcare database. A reflection agent checks every answer for accuracy and PHI exposure before it's shown.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">SQLite</span><span class="tag">Gradio</span><span class="tag">Docker</span></div>
+        <div class="actions">
+          <a href="https://github.com/akriashok/AI-Practise/tree/main/healthcare-multi-agent-langgraph" target="_blank" rel="noopener">Source →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="label">Agent + tools</span>
+        <h3>MCP Tool-Using Agent</h3>
+        <p>An MCP server built with FastMCP that exposes time, calculator and notes tools, plus a Claude-powered agent that discovers them over stdio and runs the full agentic tool-call loop until it reaches an answer.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Claude API</span><span class="tag">FastMCP</span></div>
+        <div class="actions">
+          <a href="https://github.com/akriashok/AI-Practise/tree/main/mcp-agent" target="_blank" rel="noopener">Source →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <span class="label">This site</span>
+        <h3>Portfolio</h3>
+        <p>A fast, dependency-free static site with light and dark themes, deployed automatically to GitHub Pages by a GitHub Actions workflow on every push.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Actions</span><span class="tag">GitHub Pages</span></div>
+        <div class="actions">
+          <a href="https://github.com/akriashok/ashok" target="_blank" rel="noopener">Source →</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <span class="label">Toolbox</span>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>AI &amp; Agents</h3><ul><li>LLM app design</li><li>Multi-agent orchestration (LangGraph)</li><li>Model Context Protocol (MCP)</li><li>NL2SQL &amp; RAG</li><li>Prompt &amp; reflection loops</li></ul></div>
+      <div><h3>Languages</h3><ul><li>Python</li><li>JavaScript</li><li>SQL</li><li>HTML &amp; CSS</li></ul></div>
+      <div><h3>Data &amp; UI</h3><ul><li>SQLite</li><li>Plotly</li><li>Gradio / Streamlit</li><li>Progressive Web Apps</li></ul></div>
+      <div><h3>Shipping</h3><ul><li>Docker &amp; GHCR</li><li>GitHub Actions</li><li>GitHub Pages</li><li>Render</li></ul></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <span class="label">About</span>
+    <h2>A bit about me</h2>
+    <div class="about">
+      <div>
+        <p>I'm an engineer focused on turning large language models into practical tools. I enjoy the whole path: shaping the problem, designing how agents and tools fit together, and shipping something people can open on their phone.</p>
+        <p>Lately I've been building with Claude, LangGraph and MCP, with an emphasis on answers you can trust: grounded in real data, checked by a reviewer agent, and clear about where they came from.</p>
+      </div>
+      <div class="facts">
+        <div><span class="label">Focus</span>AI agents &amp; LLM applications</div>
+        <div><span class="label">Currently</span>Building agentic tools &amp; open to opportunities</div>
+        <div><span class="label">GitHub</span><a href="https://github.com/akriashok" target="_blank" rel="noopener">@akriashok</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <span class="label">Contact</span>
+    <h2>Let's build something</h2>
+    <p>Have a role, a project or an idea involving AI agents? I'd love to hear about it.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:ashok54155@gmail.com">ashok54155@gmail.com</a>
+      <a class="btn" href="https://github.com/akriashok" target="_blank" rel="noopener">github.com/akriashok</a>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr">2026</span> Ashok · Built with plain HTML &amp; CSS, hosted on GitHub Pages</footer>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var root = document.documentElement, KEY = 'theme';
+  try { var saved = localStorage.getItem(KEY); if (saved) root.setAttribute('data-theme', saved); } catch(e) {}
+  document.getElementById('themeBtn').addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch(e) {}
+  });
+})();
+</script>
+</body>
+</html>
