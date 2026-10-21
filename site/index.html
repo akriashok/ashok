@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Ashok — AI engineer building agents with Claude, MCP and LangGraph.">
+<meta name="description" content="Akiri Ashok Kumar — Senior Software Engineer building agentic AI, multi-agent systems, RAG and data platforms for healthcare.">
 <meta name="theme-color" content="#16687f">
-<title>Ashok — Portfolio</title>
+<title>Akiri Ashok Kumar</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -36,46 +36,73 @@ nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,t
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;height:56px}
 .brand{font:800 1.15rem/1 var(--display);text-decoration:none;color:var(--fg)}
 .brand span{color:var(--accent)}
-.links{display:flex;gap:4px;align-items:center}
-.links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.92rem;padding:6px 10px;border-radius:8px}
+.links{display:flex;gap:2px;align-items:center}
+.links a{color:var(--muted);text-decoration:none;font-weight:500;font-size:.92rem;padding:6px 9px;border-radius:8px}
 .links a:hover{color:var(--fg);background:var(--sunk)}
-#themeBtn{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;width:34px;height:34px;cursor:pointer;display:grid;place-items:center}
+#themeBtn{border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:8px;width:34px;height:34px;cursor:pointer;display:grid;place-items:center;margin-left:4px}
 #themeBtn svg{width:16px;height:16px}
-@media (max-width:560px){.links a.opt{display:none}}
+@media (max-width:640px){.links a.opt{display:none}}
 
-.hero{padding:72px 0 56px;display:grid;gap:20px}
-.hero h1{font:800 clamp(2.4rem,7vw,4.4rem)/1.02 var(--display);margin:0;letter-spacing:-.02em}
+.hero{padding:64px 0 48px;display:grid;gap:18px}
+.hero h1{font:800 clamp(2.3rem,6.5vw,4.2rem)/1.03 var(--display);margin:0;letter-spacing:-.02em}
 .hero h1 mark{background:var(--mark);color:var(--mark-ink);padding:0 .12em;border-radius:6px}
-.hero p{font-size:1.15rem;color:var(--muted);max-width:60ch;margin:0}
-.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:62ch;margin:0}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.92rem}
+.meta span{display:inline-flex;align-items:center;gap:6px}
+.meta svg{width:15px;height:15px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:10px;font-weight:600;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--fg)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn:hover{transform:translateY(-1px)}
-.btn svg{width:18px;height:18px}
+.btn svg{width:18px;height:18px;flex:none}
+
+.stats{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));margin-top:18px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.stat b{display:block;font:800 2rem/1.1 var(--display);color:var(--accent)}
+.stat span{color:var(--muted);font-size:.9rem}
 
 section{padding:48px 0;border-top:1px solid var(--line)}
 section h2{font:700 clamp(1.6rem,4vw,2.2rem)/1.1 var(--display);margin:8px 0 24px}
+section h2 + .lede{margin:-12px 0 24px;color:var(--muted);max-width:62ch}
 
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr))}
+.job{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;gap:12px}
+.job header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;align-items:baseline}
+.job h3{font:700 1.3rem/1.2 var(--display);margin:0}
+.job .org{color:var(--muted);margin:0}
+.job ul{margin:0;padding-left:20px;display:grid;gap:6px}
+
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr))}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;display:flex;flex-direction:column;gap:12px}
 .card.feature{grid-column:1/-1;border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
-.card h3{font:700 1.25rem/1.2 var(--display);margin:0}
+.card h3{font:700 1.2rem/1.25 var(--display);margin:0}
 .card p{margin:0;color:var(--muted)}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.card ul{margin:0;padding-left:20px;color:var(--muted);display:grid;gap:4px}
+.card ul b{color:var(--fg);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
 .tag{font:500 .72rem/1 var(--mono);padding:6px 8px;border-radius:6px;background:var(--sunk);color:var(--fg)}
 .card .actions{display:flex;flex-wrap:wrap;gap:14px;font-weight:600;font-size:.92rem}
 .card .actions a{text-decoration:none}
 .card .actions a:hover{text-decoration:underline}
+.subhead{font:600 1rem/1.2 var(--body);margin:32px 0 14px}
+.minor{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr))}
+.minor div{border:1px dashed var(--line);border-radius:12px;padding:14px 16px}
+.minor b{display:block;margin-bottom:4px}
+.minor span{color:var(--muted);font-size:.92rem}
 
-.skills{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr))}
-.skills div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px}
-.skills h3{font:600 1rem/1.2 var(--body);margin:0 0 10px}
-.skills ul{margin:0;padding-left:18px;color:var(--muted)}
+.skills{display:grid;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.skills > div{display:grid;gap:8px;padding:16px 20px;border-top:1px solid var(--line)}
+.skills > div:first-child{border-top:0}
+@media (min-width:700px){.skills > div{grid-template-columns:200px 1fr;align-items:baseline}}
+.skills h3{font:600 .98rem/1.3 var(--body);margin:0}
+.skills .tags{margin:0;padding:0}
 
-.about{display:grid;gap:24px;grid-template-columns:1fr}
-@media (min-width:760px){.about{grid-template-columns:1.4fr 1fr}}
-.about p{margin:0 0 14px;max-width:62ch}
-.facts{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px;align-content:start}
+.two{display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:760px){.two{grid-template-columns:1.5fr 1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+.panel h3{font:700 1.15rem/1.2 var(--display);margin:0 0 14px}
+.panel ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.panel ul span{color:var(--muted)}
+.facts{display:grid;gap:14px}
 .facts div{display:grid;gap:4px}
 
 .contact{text-align:center;padding-bottom:72px}
@@ -89,9 +116,9 @@ footer{border-top:1px solid var(--line);padding:20px 0 calc(20px + env(safe-area
   <div class="wrap">
     <a class="brand" href="#top">ashok<span>.</span></a>
     <div class="links">
+      <a class="opt" href="#experience">Experience</a>
       <a href="#projects">Projects</a>
       <a class="opt" href="#skills">Skills</a>
-      <a class="opt" href="#about">About</a>
       <a href="#contact">Contact</a>
       <button id="themeBtn" aria-label="Toggle dark mode" title="Toggle theme">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -102,28 +129,112 @@ footer{border-top:1px solid var(--line);padding:20px 0 calc(20px + env(safe-area
 
 <main class="wrap" id="top">
   <header class="hero">
-    <span class="label">AI engineer · Agents · LLM apps</span>
-    <h1>Hi, I'm Ashok.<br>I build <mark>AI agents</mark> that do real work.</h1>
-    <p>I design and ship LLM-powered tools: multi-agent systems with LangGraph, tool-using agents over the Model Context Protocol, and fast in-browser apps that help people in the moment.</p>
+    <span class="label">Senior Software Engineer · Agentic AI &amp; GenAI</span>
+    <h1>Akiri Ashok Kumar.<br>I build <mark>multi-agent</mark> systems on real enterprise data.</h1>
+    <p>7 years at Carelon Global Solutions (Elevance Health), designing agent systems and data platforms for healthcare provider data: LangGraph multi-agent systems with tool calling and reflection, RAG pipelines grounded in enterprise data, and the high-volume ETL underneath them.</p>
+    <div class="meta">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Hyderabad, India</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg>B.Tech, CMRIT (2017)</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>English · Hindi · Telugu</span>
+    </div>
     <div class="cta">
       <a class="btn primary" href="#projects">See my work</a>
+      <a class="btn" href="https://www.linkedin.com/in/akiri-ashok-kumar-42157725a" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg>
+        LinkedIn
+      </a>
       <a class="btn" href="https://github.com/akriashok" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.3 18.3 4.6 18.3 4.6c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
         GitHub
       </a>
       <a class="btn" href="mailto:ashok54155@gmail.com">Email me</a>
     </div>
+    <div class="stats">
+      <div class="stat"><b>7 yrs</b><span>Senior Software Engineer, Elevance Health</span></div>
+      <div class="stat"><b>1M+</b><span>provider-data updates a day through batch ETL</span></div>
+      <div class="stat"><b>5</b><span>specialist agents in one LangGraph system</span></div>
+      <div class="stat"><b>80+</b><span>provider transaction types, metadata-driven</span></div>
+    </div>
   </header>
+
+  <section id="experience">
+    <span class="label">Experience</span>
+    <h2>Where I work</h2>
+    <article class="job">
+      <header>
+        <h3>Senior Software Engineer</h3>
+        <span class="label">Sept 2019 – Present</span>
+      </header>
+      <p class="org">Carelon Global Solutions India (formerly Legato Health Technologies), Hyderabad · Elevance Health, SPS provider-data platform</p>
+      <ul>
+        <li>Partner with business stakeholders to scope AI use cases: understand the problem, pick the right pattern (agent, RAG or NL2SQL) and co-design the solution.</li>
+        <li>Design and build agent systems in Python and LangGraph (tool calling, sub-agent orchestration, human-in-the-loop, multi-step reasoning), alongside PL/SQL load logic and Python automation.</li>
+        <li>Build MCP servers and clients that connect LLM agents to tools and enterprise data.</li>
+        <li>Guide the team as a senior engineer, providing technical direction and mentoring team members.</li>
+        <li>Run internal knowledge-sharing sessions and workshops on GenAI agents, LangChain/LangGraph and data-quality automation, so patterns built for one team are reused by others.</li>
+        <li>Build data-quality and source-to-target reconciliation checks; investigate failed and fallout records, find root causes and deliver fixes.</li>
+        <li>Unit testing and SIT, UAT, E2E and PERF support; raise and review Bitbucket pull requests and deploy through Bamboo CI/CD.</li>
+      </ul>
+    </article>
+  </section>
 
   <section id="projects">
     <span class="label">Selected work</span>
     <h2>Projects</h2>
+    <p class="lede">Agentic AI and data platforms built at Elevance Health, plus apps I build and ship on my own.</p>
     <div class="grid">
       <article class="card feature">
-        <span class="label">Live app · PWA</span>
+        <span class="label">Work · GenAI assistant</span>
+        <h3>AIDA – AI Data Processing &amp; Validation Assistant</h3>
+        <ul>
+          <li>Scoped with business users and built a GenAI assistant that helps them prepare provider-data files in plain English and validate them against business rules before submission.</li>
+          <li>Loads uploaded files into Oracle, applies business-rule validations against live data and flags errors before submission.</li>
+          <li>Human-in-the-loop peer-review gates stop high-risk changes reaching production until approved.</li>
+          <li>Reporting and file tracking: users follow each file through validation, approval and load, with status and impact reports on demand.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Snowflake Cortex</span><span class="tag">Claude Sonnet 4.5</span><span class="tag">Oracle</span></div>
+      </article>
+
+      <article class="card">
+        <span class="label">Work · Multi-agent</span>
+        <h3>Multi-Agent System – LangGraph</h3>
+        <p>Five specialist sub-agents share graph state, and each request is routed to the right one in a multi-step workflow:</p>
+        <ul>
+          <li><b>Data Explorer:</b> tool-calling NL2SQL over the provider database</li>
+          <li><b>Reporting:</b> summary and impact reports</li>
+          <li><b>File Tracker:</b> validation, approval and load stages</li>
+          <li><b>Data Visualization:</b> pass/fail and core-layer outcomes per submitter</li>
+          <li><b>Reflection:</b> reviews outputs and triggers corrections</li>
+        </ul>
+        <div class="tags"><span class="tag">LangGraph</span><span class="tag">Snowflake Cortex</span><span class="tag">Claude Sonnet 4.5</span><span class="tag">Oracle</span></div>
+        <div class="actions"><a href="https://github.com/akriashok/AI-Practise/tree/main/healthcare-multi-agent-langgraph" target="_blank" rel="noopener">Public demo version →</a></div>
+      </article>
+
+      <article class="card">
+        <span class="label">Work · RAG</span>
+        <h3>SPS Knowledge Assistant – RAG Chatbot</h3>
+        <p>A RAG pipeline grounded in enterprise project documentation that answers SPS and healthcare-domain questions (MSTR_PROV_ID, NPI, Solo Practitioner, provider attributes, business processes) for developers, testers, analysts and business users.</p>
+        <p>Chunking, embeddings and Qdrant vector search with context-grounded generation, so answers come from project knowledge rather than the model's general knowledge.</p>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">LangGraph</span><span class="tag">Qdrant</span><span class="tag">Claude Sonnet 5</span><span class="tag">OpenAI GPT</span></div>
+      </article>
+
+      <article class="card">
+        <span class="label">Work · Batch ETL</span>
+        <h3>DART – Data Automation &amp; Reconciliation Tool</h3>
+        <ul>
+          <li>Batch ETL platform applying 1,000 to 1,000,000+ provider-data updates a day to the SPS provider master-data system.</li>
+          <li>PL/SQL load logic from driver tables through work and landing tables, with transaction-specific business rules at each stage.</li>
+          <li>Metadata-driven configuration for 80+ transaction types, released monthly across Dev, SIT, UAT, PERF and PROD.</li>
+          <li>Validation and control rules that stop invalid data reaching production.</li>
+        </ul>
+        <div class="tags"><span class="tag">Oracle SQL</span><span class="tag">PL/SQL</span><span class="tag">Bitbucket</span><span class="tag">Bamboo</span></div>
+      </article>
+
+      <article class="card">
+        <span class="label">Personal · Live app</span>
         <h3>Interview Copilot</h3>
-        <p>A phone-first assistant for live interviews. It listens through the mic, transcribes the question in real time and drafts a strong answer grounded in your uploaded resume (PDF or Word). Installs to the home screen and runs entirely in the browser.</p>
-        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Web Speech API</span><span class="tag">LLM</span><span class="tag">PDF.js</span><span class="tag">PWA</span></div>
+        <p>A phone-first app for live interviews: it listens through the mic, transcribes the question in real time and drafts an answer grounded in your uploaded résumé (PDF or Word). Installs to the home screen and runs in the browser.</p>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">Web Speech API</span><span class="tag">LLM</span><span class="tag">PWA</span></div>
         <div class="actions">
           <a href="https://akriashok.github.io/AI-Practise/interview-copilot/" target="_blank" rel="noopener">Open live app →</a>
           <a href="https://github.com/akriashok/AI-Practise/tree/main/interview-copilot" target="_blank" rel="noopener">Source</a>
@@ -131,60 +242,60 @@ footer{border-top:1px solid var(--line);padding:20px 0 calc(20px + env(safe-area
       </article>
 
       <article class="card">
-        <span class="label">Multi-agent system</span>
-        <h3>Healthcare Multi-Agent (LangGraph)</h3>
-        <p>A supervisor routes questions to specialist agents (NL2SQL data explorer, KPI reporting, file tracker, Plotly visualization) over a 40-table synthetic healthcare database. A reflection agent checks every answer for accuracy and PHI exposure before it's shown.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">LangGraph</span><span class="tag">SQLite</span><span class="tag">Gradio</span><span class="tag">Docker</span></div>
-        <div class="actions">
-          <a href="https://github.com/akriashok/AI-Practise/tree/main/healthcare-multi-agent-langgraph" target="_blank" rel="noopener">Source →</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <span class="label">Agent + tools</span>
+        <span class="label">Personal · MCP</span>
         <h3>MCP Tool-Using Agent</h3>
-        <p>An MCP server built with FastMCP that exposes time, calculator and notes tools, plus a Claude-powered agent that discovers them over stdio and runs the full agentic tool-call loop until it reaches an answer.</p>
-        <div class="tags"><span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Claude API</span><span class="tag">FastMCP</span></div>
-        <div class="actions">
-          <a href="https://github.com/akriashok/AI-Practise/tree/main/mcp-agent" target="_blank" rel="noopener">Source →</a>
-        </div>
+        <p>An MCP server built with FastMCP (time, calculator and notes tools) and a Claude-powered agent that discovers them over stdio and runs the full tool-call loop until it reaches an answer.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">MCP</span><span class="tag">Claude API</span></div>
+        <div class="actions"><a href="https://github.com/akriashok/AI-Practise/tree/main/mcp-agent" target="_blank" rel="noopener">Source →</a></div>
       </article>
+    </div>
 
-      <article class="card">
-        <span class="label">This site</span>
-        <h3>Portfolio</h3>
-        <p>A fast, dependency-free static site with light and dark themes, deployed automatically to GitHub Pages by a GitHub Actions workflow on every push.</p>
-        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">GitHub Actions</span><span class="tag">GitHub Pages</span></div>
-        <div class="actions">
-          <a href="https://github.com/akriashok/ashok" target="_blank" rel="noopener">Source →</a>
-        </div>
-      </article>
+    <h3 class="subhead">Additional data engineering</h3>
+    <div class="minor">
+      <div><b>AEDL – Oracle to Snowflake Migration</b><span>Oracle → S3 → Glue → Snowflake pipeline with source-to-target validation.</span></div>
+      <div><b>CPF Data Migration</b><span>Consolidated provider data from multiple legacy markets into SPS with validation, cleansing and transformation.</span></div>
+      <div><b>GA Reporting Automation</b><span>Python and pandas classification of safety-net fallout records as valid outcomes or genuine defects, replacing manual investigation.</span></div>
+      <div><b>iCEDQ Test Automation</b><span>Automated reconciliation, record-count and data-integrity checks across downstream ETL pipelines.</span></div>
     </div>
   </section>
 
   <section id="skills">
     <span class="label">Toolbox</span>
-    <h2>Skills</h2>
+    <h2>Technical skills</h2>
     <div class="skills">
-      <div><h3>AI &amp; Agents</h3><ul><li>LLM app design</li><li>Multi-agent orchestration (LangGraph)</li><li>Model Context Protocol (MCP)</li><li>NL2SQL &amp; RAG</li><li>Prompt &amp; reflection loops</li></ul></div>
-      <div><h3>Languages</h3><ul><li>Python</li><li>JavaScript</li><li>SQL</li><li>HTML &amp; CSS</li></ul></div>
-      <div><h3>Data &amp; UI</h3><ul><li>SQLite</li><li>Plotly</li><li>Gradio / Streamlit</li><li>Progressive Web Apps</li></ul></div>
-      <div><h3>Shipping</h3><ul><li>Docker &amp; GHCR</li><li>GitHub Actions</li><li>GitHub Pages</li><li>Render</li></ul></div>
+      <div><h3>Agent Systems</h3><div class="tags"><span class="tag">LangGraph</span><span class="tag">LangChain (LCEL)</span><span class="tag">Multi-agent orchestration</span><span class="tag">Tool / function calling</span><span class="tag">Human-in-the-loop</span><span class="tag">Reflection &amp; validation</span><span class="tag">State &amp; context management</span><span class="tag">MCP (server &amp; client)</span><span class="tag">LangSmith</span><span class="tag">NL2SQL</span></div></div>
+      <div><h3>RAG &amp; LLMs</h3><div class="tags"><span class="tag">RAG</span><span class="tag">Hybrid RAG</span><span class="tag">Embeddings</span><span class="tag">Qdrant</span><span class="tag">Snowflake Cortex</span><span class="tag">Prompt engineering</span><span class="tag">Claude (Sonnet 4.5, Sonnet 5)</span><span class="tag">OpenAI GPT</span><span class="tag">OpenRouter</span></div></div>
+      <div><h3>AI-Assisted Dev</h3><div class="tags"><span class="tag">GitHub Copilot (2+ yrs)</span><span class="tag">Claude</span><span class="tag">Claude Code</span></div></div>
+      <div><h3>ETL &amp; Data Engineering</h3><div class="tags"><span class="tag">ETL design</span><span class="tag">Informatica</span><span class="tag">AWS Glue</span><span class="tag">Data migration</span><span class="tag">Source-to-target reconciliation</span><span class="tag">MDM</span></div></div>
+      <div><h3>Languages &amp; APIs</h3><div class="tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">PL/SQL</span><span class="tag">FastAPI</span><span class="tag">pandas</span></div></div>
+      <div><h3>Databases &amp; Cloud</h3><div class="tags"><span class="tag">Oracle</span><span class="tag">Snowflake</span><span class="tag">MySQL (AWS RDS)</span><span class="tag">AWS S3</span><span class="tag">AWS Glue</span></div></div>
+      <div><h3>DevOps &amp; Testing</h3><div class="tags"><span class="tag">Docker</span><span class="tag">Git (Bitbucket)</span><span class="tag">CI/CD (Bamboo)</span><span class="tag">iCEDQ</span><span class="tag">SIT / UAT / E2E / PERF</span></div></div>
     </div>
   </section>
 
   <section id="about">
-    <span class="label">About</span>
-    <h2>A bit about me</h2>
-    <div class="about">
-      <div>
-        <p>I'm an engineer focused on turning large language models into practical tools. I enjoy the whole path: shaping the problem, designing how agents and tools fit together, and shipping something people can open on their phone.</p>
-        <p>Lately I've been building with Claude, LangGraph and MCP, with an emphasis on answers you can trust: grounded in real data, checked by a reviewer agent, and clear about where they came from.</p>
+    <span class="label">Credentials</span>
+    <h2>Certifications &amp; education</h2>
+    <div class="two">
+      <div class="panel">
+        <h3>Certifications &amp; training</h3>
+        <ul>
+          <li>Claude Code in Action <span>– Anthropic</span></li>
+          <li>Agentic AI with LangChain and LangGraph <span>– IBM</span></li>
+          <li>Fundamentals of Building AI Agents <span>– IBM</span></li>
+          <li>Build RAG Applications: Get Started <span>– IBM</span></li>
+          <li>Develop Generative AI Applications: Get Started <span>– IBM</span></li>
+          <li>Generative AI &amp; Prompt Engineering Program <span>– EduHubSpot</span></li>
+          <li>Python for Data Science, AI &amp; Development <span>– IBM</span></li>
+          <li>Ultimate AWS Certified Developer – Associate <span>(course)</span></li>
+        </ul>
       </div>
-      <div class="facts">
-        <div><span class="label">Focus</span>AI agents &amp; LLM applications</div>
-        <div><span class="label">Currently</span>Building agentic tools &amp; open to opportunities</div>
-        <div><span class="label">GitHub</span><a href="https://github.com/akriashok" target="_blank" rel="noopener">@akriashok</a></div>
+      <div class="panel facts">
+        <h3>Education</h3>
+        <div><span class="label">Degree</span>Bachelor of Technology (B.Tech)</div>
+        <div><span class="label">College</span>CMRIT · 2017</div>
+        <div><span class="label">Languages</span>English, Hindi, Telugu</div>
+        <div><span class="label">Based in</span>Hyderabad, India</div>
       </div>
     </div>
   </section>
@@ -192,15 +303,16 @@ footer{border-top:1px solid var(--line);padding:20px 0 calc(20px + env(safe-area
   <section id="contact" class="contact">
     <span class="label">Contact</span>
     <h2>Let's build something</h2>
-    <p>Have a role, a project or an idea involving AI agents? I'd love to hear about it.</p>
+    <p>Hiring for agentic AI, RAG or data engineering, or have a project in mind? I'd love to hear about it.</p>
     <div class="cta">
       <a class="btn primary" href="mailto:ashok54155@gmail.com">ashok54155@gmail.com</a>
-      <a class="btn" href="https://github.com/akriashok" target="_blank" rel="noopener">github.com/akriashok</a>
+      <a class="btn" href="https://www.linkedin.com/in/akiri-ashok-kumar-42157725a" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/akriashok" target="_blank" rel="noopener">GitHub</a>
     </div>
   </section>
 </main>
 
-<footer>© <span id="yr">2026</span> Ashok · Built with plain HTML &amp; CSS, hosted on GitHub Pages</footer>
+<footer>© <span id="yr">2026</span> Akiri Ashok Kumar · Built with plain HTML &amp; CSS, hosted on GitHub Pages</footer>
 
 <script>
 document.getElementById('yr').textContent = new Date().getFullYear();

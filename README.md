@@ -1,4 +1,4 @@
-# Ashok — Portfolio
+# Akiri Ashok Kumar — Portfolio
 
 Personal portfolio site: a single static page (`site/index.html`) with light and dark themes and no build step.
 
@@ -13,5 +13,5 @@ One-time setup: in the repo go to **Settings → Pages → Build and deployment 
 
 ## Edit
 
-Open `site/index.html` and change the text in the Projects, Skills, About and Contact sections.
+Open `site/index.html` and change the text in the Experience, Projects, Skills, Credentials and Contact sections.
 To preview locally: `python3 -m http.server -d site 8000` and open http://localhost:8000.
